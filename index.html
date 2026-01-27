@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q3 Drill 2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"; rel="stylesheet">
+
+    <style>
+
+        #text {
+            font-size: 19px;
+        }
+
+        #textblock{
+            padding: 20px 30px;
+            margin-left: 500px;
+            margin-right: 500px;
+            
+
+        div{
+            padding: 10px 15px;
+            margin-left: 300px;
+            margin-right: 300px;
+        }
+
+        #result {
+            margin-left: 300px;
+            margin-right: 300px;
+            padding: 10px 15px;
+        }
+        button{
+            margin-top: 8px;
+            position: absolute;
+        }
+
+    </style>
+    </head>
+<body>
+
+    <div class="container bg-primary text-center text-light mt-3 rounded thirtyfour">
+
+        <h1 class="fst-italic" id="head1">Basic Calculator le V2</h1>
+        <br>
+
+    <details class="ontoggle mx-auto d-block">
+        <summary>Instructions</summary>
+        <p id="instructions"></p>
+    </details>
+
+   <form>
+        <label>Enter 1st Number</label>
+            <input type="number" id="num1" class="form-control">
+        <label>Enter 2nd Number</label>
+            <input type="number" id="num2" class="form-control">
+        <button type="submit" class="btn btn-light" onmouseover="plus()">Calculate</button>
+    </form>
+
+
+    <br>
+
+    <p id="result" class="text-center text-dark bg-light fw-bold" style="font-size: 30px;"></p>
+
+    <!--
+    <button type="button" id="b1" class="btn btn-secondary text-center text-light" onclick="window.alert('The Answer is: ' + a )">Click</button>
+
+    <button type="button" id="b2" class="btn btn-secondary text-center text-light" onclick="document.write('The Answer is: ' + a )">Click</button>
+    -->
+
+
+    <script>
+
+        function plus(){
+            var num1 = document.getElementById("num1").value;
+            var num2 = document.getElementById("num2").value;
+            var sum = Number(num1) + Number(num2);
+            var compare = Number(num1) <= Number(num2);
+                alert("The sum is: " + sum)
+                alert("Is the 1st number less than or equal to the 2nd number? " + compare)
+
+        }
+
+        document.getElementById('instructions').innerHTML= "Type the 2 numbers and click on the desired operation";
+
+    </script>
+
+
+
+</body>
+</html>
