@@ -3,108 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <title>Q3 SW2</title>
+    <title>Q3 Drill 2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"; rel="stylesheet">
+
     <style>
-    body{
-            background-image: url('https://https://images8.alphacoders.com/555/thumb-1920-555560.jpghttps://img.freepik.com/free-photo/anime-moon-landscape_23-2151645871.jpg?semt=ais_wordcount_boost&w=740&q=80.pngtree.com/thumb_back/fh260/background/20241021/pngtree-sunset-meadow-anime-landscape-wallpaper-image_16403492.jpghttps://cdn.wallpapersafari.com/62/37/C30mGu.jpeg');
-            margin: 50px;
 
+        #text {
+            font-size: 19px;
         }
 
-    input{
-            margin: 10px;
-        }
-    img{
-        width: 50px;
-        height: 50px;
-    }
-    h2{
-        length: 75px;
-        border-radius: 5px;
-        padding-left: 5px;
-    }
-
-    </style>
-</head>
-<body>
-      <nav class="navbar navbar-expand-lg navbar-light bg-white">
-  <div class="container-fluid">
-
-    <a class="navbar-brand" href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQchdgIeG7ozkE0TV__FakwgnYka2ouCJgzNg&s" alt="oblogo" class="" id="logo"></a>
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="mynavbar">
-      <ul class="navbar-nav me-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="">Shop</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="">Locate</a>
-        </li>
-      </ul>
-</div>
-
-</div>
-</nav>
-
-
-<br>
-    <div class="text-center">
-    <h2 class="container bg-primary text-light">Product Locator</h2>
-
-
-    <br>
-
-
-    <details class="ontoggle container bg-dark text-light">
-        <summary>Instructions
-        </summary>
-        <p id="instructions">Type your desired cube and find its price
-        </p>
-    </details>
-    </div>
-
-    <div class="row jerry">
-        <div class="">
-            <input type="number" class="form-control mx-auto d-block" id="num1">
-        </div>
-        
-    </div>
-
-        <button type="button" class="btn btn-primary mx-auto d-block" onclick="showthingy()" id="search">Search</button>
-        <button type="button" class="btn btn-primary mx-auto d-block" onclick="discount()" id="">Discounted Prices (20% Off)</button>
-
-<center>
-       <div id="cube"></div>
-        </center>
-             
-        </div>  
-
-                <script>
-               function showthingy(){
-
+        #textblock{
+            padding: 20px 30px;
+            margin-left: 500px;
+            margin-right: 500px;
             
 
+        div{
+            padding: 10px 15px;
+            margin-left: 300px;
+            margin-right: 300px;
+        }
 
-                document.getElementById('cube').innerHTML = 
-                                " <div class='container'><h1>Products</h1><br><p>Moyu RS3M V5 - 24.99$</p><p>X-Man Tornado V3 - 34.99$</p><p>X-Man Tornado V4 Pioneer - 39.99$</p><p>Gan 16 Max - 79.99$</p><p>Moyu Super Weilong V2 - 89.99$</p><p>Dayan Guhong Pro 19.99$</p><p>Gan V100 Leap - 34.99$</p><p>Moyu Weilong V11 - 44.99$</p><p>Moyu Weilong V10 - 39.99$</p></div>"
+        #result {
+            margin-left: 300px;
+            margin-right: 300px;
+            padding: 10px 15px;
+        }
+        button{
+            margin-top: 8px;
+            position: absolute;
+        }
 
-               }     
-               function discount(){
+    </style>
+    </head>
+<body>
 
-                document.getElementById('cube').innerHTML = 
-                " <div class='container'><h1>Products</h1><br><p>Moyu RS3M V5 - 19.99$</p><p>X-Man Tornado V3 - 27.99$</p><p>X-Man Tornado V4 Pioneer - 31.99$</p><p>Gan 16 Max - 64$</p><p>Moyu Super Weilong V2 - 72$</p><p>Dayan Guhong Pro 195.99$</p><p>Gan V100 Leap - 27.99$</p><p>Moyu Weilong V11 - 35.99$</p><p>Moyu Weilong V10 - 31.99$</p></div>"
+    <div class="container bg-primary text-center text-light mt-3 rounded thirtyfour">
 
-               }    
-            </script>
+        <h1 class="fst-italic" id="head1">Basic Calculator le V2</h1>
+        <br>
+
+    <details class="ontoggle mx-auto d-block">
+        <summary>Instructions</summary>
+        <p id="instructions"></p>
+    </details>
+
+   <form>
+        <label>Enter 1st Number</label>
+            <input type="number" id="num1" class="form-control">
+        <label>Enter 2nd Number</label>
+            <input type="number" id="num2" class="form-control">
+        <button type="submit" class="btn btn-light" onmouseover="plus()">Calculate</button>
+    </form>
+
+
     <br>
-    <br>
-    <br>
-            <div class="container bg-light">
-                
-            </div>
-            <p id="copyright" class="text-light text-center">© 2026 | Francis Ezekiel FErnandez 9-Topaz</p>
+
+    <p id="result" class="text-center text-dark bg-light fw-bold" style="font-size: 30px;"></p>
+
+    <!--
+    <button type="button" id="b1" class="btn btn-secondary text-center text-light" onclick="window.alert('The Answer is: ' + a )">Click</button>
+
+    <button type="button" id="b2" class="btn btn-secondary text-center text-light" onclick="document.write('The Answer is: ' + a )">Click</button>
+    -->
+
+
+    <script>
+
+        function plus(){
+            var num1 = document.getElementById("num1").value;
+            var num2 = document.getElementById("num2").value;
+            var sum = Number(num1) + Number(num2);
+            var compare = Number(num1) <= Number(num2);
+                alert("The sum is: " + sum)
+                alert("Is the 1st number less than or equal to the 2nd number? " + compare)
+
+        }
+
+        document.getElementById('instructions').innerHTML= "Type the 2 numbers and click on the desired operation";
+
+    </script>
+
+
+
+</body>
+</html>
